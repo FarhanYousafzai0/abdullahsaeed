@@ -2,6 +2,7 @@
 import { SpinnerDotted } from "spinners-react";
 import Header from "../components/Header";
 import { Experience } from "../Utils/data";
+import { PulseLoader } from "react-spinners";
 
 export const Page = () => {
   return (
@@ -66,10 +67,10 @@ export const Page = () => {
 
     <div className="mt-20 ">
 
-    <span className="md:text-4xl mr-10 text-5xl text-gray-600 font-normal ">
-              I can help you with
+    <span className="md:text-5xl mr-10 text-3xl text-gray-600 font-normal flex items-end gap-1 ">
+              I can help you with <PulseLoader size={5} speedMultiplier={0.5} color="text-gray-600 "/>
             </span>
-<div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+<div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
   {Experience.map((item, index) => (
     <div key={index} className="relative pt-10 px-5 pb-5">
       

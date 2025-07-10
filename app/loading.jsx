@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { RotateLoader } from 'react-spinners';
 
-const loading = () => {
+const Loading = () => {
   return (
-    <div>
-      ----Loading
+    <div className="flex items-center justify-center h-screen w-screen bg-white text-black text-xl font-semibold">
+      <RotateLoader   color="text-gray-600 "/>
     </div>
-  )
-}
+  );
+};
 
-export default loading
+export default Loading;

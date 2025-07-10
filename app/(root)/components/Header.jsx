@@ -72,12 +72,12 @@ const Header = () => {
 
         {/* CTA */}
         <div className="hidden lg:flex">
-          <Link
-            href="#"
-            className="px-5 py-2 text-base font-semibold leading-7 text-gray-900 border border-gray-900 rounded-xl"
-          >
-            Join community
-          </Link>
+        <div className="relative inline-flex w-fit  group">
+              <div className="absolute transition-all duration-1000  opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt" />
+              <button type="submit" className="relative inline-flex cursor-pointer  items-center justify-center h-[3rem] w-[8rem] text-lg  text-white transition-all duration-200 bg-gray-900 rounded-xl">
+                Join community
+              </button> 
+            </div>
         </div>
 
         {/* Mobile Menu Button */}

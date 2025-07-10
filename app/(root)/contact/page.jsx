@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Header from "../components/Header";
 import { ArrowUpRight } from "lucide-react";
+import { BeatLoader, SyncLoader } from "react-spinners";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -28,7 +29,7 @@ const ContactPage = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
-
+  
     try {
       const response = await fetch("https://formspree.io/f/xyzjaegg", {
         method: "POST",
@@ -37,7 +38,7 @@ const ContactPage = () => {
         },
         body: JSON.stringify(formData),
       });
-
+  
       if (response.ok) {
         setSubmitStatus("success");
         setFormData({
@@ -47,6 +48,11 @@ const ContactPage = () => {
           services: "",
           message: "",
         });
+  
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus(null);
+        }, 5000);
       } else {
         setSubmitStatus("error");
       }
@@ -84,7 +90,7 @@ const ContactPage = () => {
     </span>
 
     <p className="mt-6 text-lg text-neutral-600 max-w-2xl">
-      We look forward to working with you and helping you grow your LinkedIn network!
+      We look forward to working with you and helping you grow your Linkedin network!
     </p>
   </div>
 </div>
@@ -151,14 +157,12 @@ const ContactPage = () => {
               </div>
 
               {/* Submit Button */}
-              <button
-                type="submit"
-                className="relative px-6 py-4 w-fit cursor-pointer text-base font-medium bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md hover:shadow-lg"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "Submitting..." : "Submit Request"}
-                <span className="absolute inset-0 rounded-xl border-2 border-white opacity-0 hover:opacity-20 transition-opacity"></span>
-              </button>
+              <div className="relative inline-flex w-fit mt-10 group">
+              <div className="absolute transition-all duration-1000  opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt" />
+              <button type="submit" disabled={isSubmitting} className="relative inline-flex cursor-pointer  items-center justify-center h-[3rem] w-[8rem] text-lg  text-white transition-all duration-200 bg-gray-900 rounded-xl">
+                {isSubmitting ? <BeatLoader size={10} color="white" /> :  "Sumbit"}
+              </button> 
+            </div>
             </form>
 
             {/* RIGHT: CONTACT INFO */}
