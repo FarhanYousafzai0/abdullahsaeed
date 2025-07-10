@@ -119,7 +119,7 @@ export const Page = () => {
 
        {/* Image */}
        <div className="md:w-1/2 w-full">
-         <img src="/image3.jpeg" alt="Profile" className="rounded-md w-full object-cover" />
+         <img src="/HomeP.jpeg" alt="Profile" className="rounded-md w-full object-cover" />
        </div>
      </div>
    </div>

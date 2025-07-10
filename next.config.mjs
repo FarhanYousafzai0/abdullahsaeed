@@ -3,7 +3,7 @@ const nextConfig = {
     images: {
       domains: ['tailwindcss.com'],
     },
-    output:"export"
+    // output:"export"
   }
 
 export default nextConfig;
