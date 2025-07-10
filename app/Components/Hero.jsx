@@ -10,6 +10,7 @@ const Hero = () => {
 
   return (
     <div className="overflow-x-hidden bg-gray-50 h-screen relative">
+        
       {/* Sidebar for Mobile */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-white z-50 shadow-xl transition-all duration-300 ${
@@ -72,7 +73,7 @@ const Hero = () => {
             <div className="hidden lg:flex">
               <Link
                 href="#"
-                className="px-5 py-2 text-base font-semibold leading-7 text-gray-900 border border-gray-900 rounded-xl hover:bg-black hover:text-white transition-all"
+                className="px-5 py-2 text-base font-semibold leading-7 text-gray-900 border border-gray-900 rounded-xl  transition-all"
               >
                 Join community
               </Link>
@@ -88,7 +89,7 @@ const Hero = () => {
             <p className="inline-flex px-4 py-2 text-base text-gray-900 border border-gray-200 rounded-full">
               LinkedIn Profile Optimization Experts
             </p>
-            <h1 className="mt-5 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl lg:text-9xl">
               We help professionals get noticed by recruiters & clients
             </h1>
             <p className="max-w-xl mx-auto mt-6 text-base leading-7 text-gray-600">
