@@ -16,7 +16,7 @@ const Services = () => {
             <p className="text-lg mt-10 font-medium text-gray-600 font-pj">
               Discover what Abdullah (LinkedIn Wala) can do for you
             </p>
-            <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
+            <h2 className="mt-4 text-5xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
               Our Professional Services
             </h2>
           </div>

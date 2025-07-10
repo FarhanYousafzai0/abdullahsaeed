@@ -79,7 +79,7 @@ const ContactPage = () => {
 
   {/* Text Content on Top of Gradient */}
   <div className="relative z-10">
-    <span className="md:text-6xl text-4xl font-semibold leading-tight">
+    <span className="md:text-5xl text-4xl font-semibold leading-tight">
       Let's take your LinkedIn profile <br /> to the next level.
     </span>
 
