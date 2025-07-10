@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import Header from "../components/Header";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -58,6 +59,7 @@ const ContactPage = () => {
 
   return (
     <>
+    <Header/>
       <div className="w-screen overflow-x-hidden min-h-screen bg-white text-black">
        
 

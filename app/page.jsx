@@ -1,8 +1,8 @@
 import React from 'react'
-import Hero from './Components/Hero'
-import HeroSection from './Components/Hero'
-import Testimonials from './Components/Testimonials'
-import CTA from './Components/CTA'
+import Hero from './components/Hero'
+import HeroSection from './components/Hero'
+import Testimonials from './components/Testimonials'
+import CTA from './components/CTA'
 
 
 const page = () => {

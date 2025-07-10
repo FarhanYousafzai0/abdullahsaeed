@@ -13,31 +13,27 @@ const Hero = () => {
         
       {/* Sidebar for Mobile */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white z-50 shadow-xl transition-all duration-300 ${
+        className={`fixed top-0 left-0 h-full w-64 bg-white md:hidden block z-50 shadow-xl transition-all duration-300 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex items-center justify-between p-6 border-b">
-          <h2 className="text-lg font-semibold">Menu</h2>
+        <div className="flex items-center justify-between p-6 ">
+        
           <button onClick={() => setSidebarOpen(false)}>
-            <XMarkIcon className="w-6 h-6 text-gray-700" />
+            <XMarkIcon className="w-6 h-6 cursor-pointer text-gray-700" />
           </button>
         </div>
-        <nav className="flex flex-col gap-4 p-6">
+        <h2 className="text-lg text-light">Navigations</h2>
+        <div className="flex flex-col gap-4 p-6">
           <Link href="#" className="text-gray-800 hover:text-indigo-600 font-medium">About</Link>
           <Link href="#" className="text-gray-800 hover:text-indigo-600 font-medium">Services</Link>
           <Link href="#" className="text-gray-800 hover:text-indigo-600 font-medium">Contact</Link>
-          <Link
-            href="#"
-            className="mt-4 px-4 py-2 text-sm font-semibold text-white bg-gray-900 rounded-xl text-center"
-          >
-            Join community
-          </Link>
-        </nav>
+          
+        </div>
       </div>
 
       {/* Header */}
-      <header className="relative py-4 md:py-6 z-40">
+      <div className="relative py-4 md:py-6 z-40">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between">
             {/* Logo */}
@@ -54,9 +50,9 @@ const Hero = () => {
             </div>
 
             {/* Hamburger Icon */}
-            <div className="flex lg:hidden">
-              <button onClick={() => setSidebarOpen(true)} className="text-gray-900" >
-               <div className="flex flex-col gap-1 items-end group ">
+            <div className="flex lg:hidden cursor-pointer">
+              <button onClick={() => setSidebarOpen(!sidebarOpen)} className="text-gray-900" >
+               <div className="flex flex-col gap-1 items-end group cursor-pointer ">
                 <span className='w-[15px] group-hover:w-[30px] transition-all duration-300 h-[3px] bg-black rounded'></span>
                 <span className='w-[30px] roup-hover:w-[15px]  transition-all duration-300 h-[3px] bg-black rounded'></span>
                
@@ -82,7 +78,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </header>
+      </div>
 
       {/* Hero Section */}
       <section className="relative py-12 sm:py-16 lg:pt-20 xl:pb-0">
