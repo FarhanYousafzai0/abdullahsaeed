@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { XMarkIcon } from '@heroicons/react/24/solid'
+import { EnvelopeIcon, XMarkIcon } from '@heroicons/react/24/solid'
+import { BriefcaseIcon, ChevronRightIcon, CogIcon, TwitterIcon, UserIcon } from 'lucide-react'
 
 const Hero = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -25,19 +26,69 @@ const Hero = () => {
     <div className="overflow-x-hidden bg-gray-50 h-screen relative">
       
       {/* Sidebar for Mobile */}
-      <div className={`fixed top-0 left-0 h-full w-64 bg-white md:hidden block z-50 shadow-xl transition-all duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-        <div className="flex items-center justify-between p-6 ">
-          <button onClick={() => setSidebarOpen(false)}>
-            <XMarkIcon className="w-6 h-6 cursor-pointer text-gray-700" />
-          </button>
-        </div>
-        <h2 className="text-lg text-light">Navigations</h2>
-        <div className="flex flex-col gap-4 p-6">
-          <Link href="#" className="text-gray-800 hover:text-indigo-600 font-medium">About</Link>
-          <Link href="#" className="text-gray-800 hover:text-indigo-600 font-medium">Services</Link>
-          <Link href="#" className="text-gray-800 hover:text-indigo-600 font-medium">Contact</Link>
-        </div>
-      </div>
+      <div 
+  className={`fixed top-0 left-0 h-full w-72 bg-white/95 backdrop-blur-lg z-50 shadow-2xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}
+  style={{
+    borderRight: '1px solid rgba(255,255,255,0.2)',
+    boxShadow: 'rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px'
+  }}
+>
+  {/* Header with close button */}
+  <div className="flex items-center justify-between p-6 border-b border-gray-100">
+    <h2 className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+      Menu
+    </h2>
+    <button 
+      onClick={() => setSidebarOpen(false)}
+      className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+      aria-label="Close menu"
+    >
+      <XMarkIcon className="w-6 h-6 text-gray-500 hover:text-gray-700" />
+    </button>
+  </div>
+
+  {/* Navigation Links */}
+  <nav className="p-6 space-y-4">
+    {[
+      { name: 'About', href: '#', icon: <UserIcon className="w-5 h-5" /> },
+      { name: 'Services', href: '#', icon: <CogIcon className="w-5 h-5" /> },
+      { name: 'Work', href: '#', icon: <BriefcaseIcon className="w-5 h-5" /> },
+      { name: 'Contact', href: '#', icon: <EnvelopeIcon className="w-5 h-5" /> }
+    ].map((item) => (
+      <Link
+        key={item.name}
+        href={item.href}
+        className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:text-indigo-600 hover:bg-gray-50 transition-all duration-300 group"
+        onClick={() => setSidebarOpen(false)}
+      >
+        
+        <span className="font-medium">{item.name}</span>
+        <ChevronRightIcon className="ml-auto w-4 h-4 text-gray-400 group-hover:text-indigo-600 transition-colors" />
+      </Link>
+    ))}
+  </nav>
+
+  {/* Footer with social links */}
+  <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-100">
+    <p className="text-sm text-gray-500 mb-4">Connect with me</p>
+    <div className="flex gap-4">
+      {[
+        { name: 'Twitter',      },
+        { name: 'LinkedIn',      },
+        { name: 'GitHub',     }
+      ].map((social) => (
+        <a
+          key={social.name}
+          href="#"
+          className="p-2 rounded-full text-black hover:text-indigo-600 transition-colors"
+          aria-label={social.name}
+        >
+          
+        </a>
+      ))}
+    </div>
+  </div>
+</div>
 
       {/* Header */}
       <div className={`fixed top-0 left-0 w-full z-40 shadowtransition-transform duration-500 ${scrollingUp ? 'translate-y-0 bg-gray-50 ' : '-translate-y-full'}`}>
@@ -87,13 +138,13 @@ const Hero = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-16 lg:pt-32 xl:pb-0">
+      <section className="relative py-20 sm:py-16 lg:pt-32 xl:pb-0">
         <div className="relative px-4 mx-auto sm:px-6 text-center lg:px-8 max-w-7xl">
-          <p className="inline-flex px-4 py-4 text-base text-gray-900 border border-gray-200 rounded-full">
+          <p className="inline-flex px-4 py-3 text-base text-gray-900 border border-gray-200 rounded-full">
             LinkedIn Profile Optimization Experts
           </p>
           <div className="max-w-3xl mx-auto text-center">
-            <span className="mt-5 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl lg:text-5xl">
+            <span className="mt-5 text-4xl font-bold  text-gray-900 sm:text-5xl lg:text-5xl">
               We help professionals get noticed by recruiters & clients
             </span>
             <p className="max-w-xl mx-auto mt-6 text-base leading-7 text-gray-600">
@@ -101,10 +152,12 @@ const Hero = () => {
             </p>
 
             {/* CTA Button with Gradient Glow */}
-            <div className="relative inline-flex mt-10 group">
+            <div className="relative inline-flex mt-10  group">
               <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt" />
-              <Link href="/contact" className="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 rounded-xl">
+              <Link href={'/contact'}>
+              <button  className="relative cursor-pointer inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 rounded-xl">
                 Get Started
+              </button>
               </Link>
             </div>
           </div>
