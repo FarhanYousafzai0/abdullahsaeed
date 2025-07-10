@@ -1,12 +1,9 @@
 "use client";
 
-;
-import Header from "@/app/components/Header2";
 import Link from "next/link";
 import React, { useState } from "react";
-import { SpinnerDotted } from "spinners-react";
 
-const page = () => {
+const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -61,196 +58,131 @@ const page = () => {
 
   return (
     <>
-    
-    
-    
-
-    
-    <div className="w-screen overflow-x-hidden min-h-screen bg-white text-black">
-      <Header/>
-      {/* Top Heading */}
-      <div className="md:w-[80%] w-[90%] py-30 mx-auto">
-        <span className="md:text-6xl text-4xl font-normal ">
-          Let's build something <br /> great together.
-        </span>
-
-        {/* Form + Contact Info */}
-        <div className="w-full pt-16 flex flex-col md:flex-row gap-20 text-lg">
-          {/* LEFT: Form */}
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-10 md:w-1/2 w-full"
-          >
-            {/* Status Messages */}
-            {submitStatus === "success" && (
-              <div className="p-4 bg-green-100 text-green-800 rounded-lg">
-                Thank you! Your message has been sent successfully. I'll get back to you soon.
-              </div>
-            )}
-            {submitStatus === "error" && (
-              <div className="p-4 bg-red-100 text-red-800 rounded-lg">
-                Oops! Something went wrong. Please try again or contact me directly.
-              </div>
-            )}
-
-            {/* Name */}
-            <div>
-              <p className="text-xs text-neutral-400 font-light">01</p>
-              <label className="text-lg mb-1 block" htmlFor="name">
-                What's your name?
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                placeholder="John Doe"
-                className="w-full border-b border-neutral-300 bg-transparent py-2 outline-none text-neutral-600"
-                value={formData.name}
-                onChange={handleChange}
-                disabled={isSubmitting}
-              />
-            </div>
-
-            {/* Email */}
-            <div>
-              <p className="text-xs text-neutral-400 font-light">02</p>
-              <label className="text-lg mb-1 block" htmlFor="email">
-                What's your email?
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="john@doe.com"
-                className="w-full border-b border-neutral-300 bg-transparent py-2 outline-none text-neutral-600"
-                value={formData.email}
-                onChange={handleChange}
-                disabled={isSubmitting}
-              />
-            </div>
-
-            {/* Organization */}
-            <div>
-              <p className="text-xs text-neutral-400 font-light">03</p>
-              <label className="text-lg mb-1 block" htmlFor="organization">
-                What's the name of your organization?
-              </label>
-              <input
-                type="text"
-                id="organization"
-                name="organization"
-                placeholder="John & Doe"
-                className="w-full border-b border-neutral-300 bg-transparent py-2 outline-none text-neutral-600"
-                value={formData.organization}
-                onChange={handleChange}
-                disabled={isSubmitting}
-              />
-            </div>
-
-            {/* Services */}
-            <div>
-              <p className="text-xs text-neutral-400 font-light">04</p>
-              <label className="text-lg mb-1 block" htmlFor="services">
-                What services are you looking for?
-              </label>
-              <input
-                type="text"
-                id="services"
-                name="services"
-                placeholder="Web Design, Web Development..."
-                className="w-full border-b border-neutral-300 bg-transparent py-2 outline-none text-neutral-600"
-                value={formData.services}
-                onChange={handleChange}
-                disabled={isSubmitting}
-              />
-            </div>
-
-            {/* Message */}
-            <div>
-              <p className="text-xs text-neutral-400 font-light">05</p>
-              <label className="text-lg mb-1 block" htmlFor="message">
-                Your message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                placeholder="Hello Farhan, can you help me with ..."
-                className="w-full border-b border-neutral-300 bg-transparent py-2 outline-none text-neutral-600 resize-none"
-                value={formData.message}
-                onChange={handleChange}
-                disabled={isSubmitting}
-              />
-            </div>
-
+      <div className="w-screen overflow-x-hidden min-h-screen bg-white text-black">
        
-            
-          
-          </form>
 
-          {/* RIGHT: Contact Info */}
-          <div className="flex flex-col gap-10 md:w-1/2 w-full">
-            {/* Contact Details */}
-            <div>
-              <h5 className="text-neutral-400 uppercase text-xs mb-2">
-                Contact Details
-              </h5>
-              <p className="mb-1 text-black">coderwithferry@gmail.com</p>
-              <p className="text-black">+92 3197421574</p>
-            </div>
+        <div className="md:w-[80%] w-[90%] py-30 mx-auto">
+          <span className="md:text-6xl text-4xl font-semibold leading-tight">
+            Let’s take your Linkedin  profile <br />  to the next level.
+          </span>
 
-            {/* Business Info */}
-            <div>
-              <h5 className="text-neutral-400 uppercase text-xs mb-2">
-                Business Details
-              </h5>
-              <p className="text-black">FarhanYousfzai</p>
-              <p className="text-black">Location: Pakistan</p>
-            </div>
+          <p className="mt-6 text-lg text-neutral-600 max-w-2xl">
+            We look forward to working with you and helping you grow your LinkedIn network!
+          </p>
 
-            {/* Social Links */}
-            <div>
-              <h5 className="text-neutral-400 uppercase text-xs mb-2">Socials</h5>
-              <ul className="space-y-1">
-                <li>
-                  <Link
-                    href="https://github.com/coderwithferry"
-                    className="hover:underline text-black"
-                    target="_blank"
-                  >
-                    GitHub
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://twitter.com/"
-                    className="hover:underline text-black"
-                    target="_blank"
-                  >
-                    Twitter
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://linkedin.com/"
-                    className="hover:underline text-black"
-                    target="_blank"
-                  >
-                    LinkedIn
-                  </Link>
-                </li>
-              </ul>
+          <div className="w-full pt-16 flex flex-col md:flex-row gap-20 text-lg">
+            {/* LEFT: FORM */}
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-10 md:w-1/2 w-full"
+            >
+              {/* Success/Error Messages */}
+              {submitStatus === "success" && (
+                <div className="p-4 bg-green-100 text-green-800 rounded-lg">
+                  Thank you! We’ve received your request and will get back to you shortly.
+                </div>
+              )}
+              {submitStatus === "error" && (
+                <div className="p-4 bg-red-100 text-red-800 rounded-lg">
+                  Something went wrong. Please try again or email us directly.
+                </div>
+              )}
+
+              {/* Input Fields */}
+              {[
+                { label: "Your full name", name: "name", type: "text", placeholder: "Abdullah Khan" },
+                { label: "Email address", name: "email", type: "email", placeholder: "abdullah@example.com" },
+                { label: "Company or personal brand", name: "organization", type: "text", placeholder: "Abdullah LinkedInWala" },
+                { label: "Service you're interested in", name: "services", type: "text", placeholder: "Profile Optimization, Branding..." },
+              ].map((field, index) => (
+                <div key={index}>
+                  <p className="text-xs text-neutral-400 font-light">0{index + 1}</p>
+                  <label htmlFor={field.name} className="text-lg block mb-1">
+                    {field.label}
+                  </label>
+                  <input
+                    {...field}
+                    required={index < 2}
+                    className="w-full border-b border-neutral-300 bg-transparent py-2 outline-none text-neutral-600"
+                    value={formData[field.name]}
+                    onChange={handleChange}
+                    disabled={isSubmitting}
+                  />
+                </div>
+              ))}
+
+              {/* Message */}
+              <div>
+                <p className="text-xs text-neutral-400 font-light">05</p>
+                <label htmlFor="message" className="text-lg block mb-1">
+                  Your message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Tell us more about your goals or what you're looking for..."
+                  className="w-full border-b border-neutral-300 bg-transparent py-2 outline-none text-neutral-600 resize-none"
+                  value={formData.message}
+                  onChange={handleChange}
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="px-5 py-3 w-fit cursor-pointer text-sm bg-black leading-7 text-white border border-gray-900 rounded-xl  transition-all"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Submitting..." : "Submit Request"}
+              </button>
+            </form>
+
+            {/* RIGHT: CONTACT INFO */}
+            <div className="flex flex-col gap-10 md:w-1/2 w-full">
+              {/* Contact */}
+              <div>
+                <h5 className="text-neutral-400 uppercase text-xs mb-2">Contact Info</h5>
+                <p className="mb-1 text-black">info@abdullahlinkedinwala.com</p>
+                <p className="text-black">+92 333 111 222 6</p>
+              </div>
+
+              {/* Office */}
+              <div>
+                <h5 className="text-neutral-400 uppercase text-xs mb-2">Office Location</h5>
+                <p className="text-black">
+                  Office no 29, Street no 4, Industrial Area, I-10/3, Islamabad
+                </p>
+              </div>
+
+              {/* Socials */}
+              <div>
+                <h5 className="text-neutral-400 uppercase text-xs mb-2">Socials</h5>
+                <ul className="space-y-1">
+                  <li>
+                    <Link href="https://linkedin.com/" target="_blank" className="hover:underline text-black">
+                      LinkedIn
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="https://instagram.com/" target="_blank" className="hover:underline text-black">
+                      Instagram
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="https://twitter.com/" target="_blank" className="hover:underline text-black">
+                      Twitter
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    
     </>
-    
   );
 };
 
-export default page;
+export default ContactPage;

@@ -55,18 +55,20 @@ const Hero = () => {
 
             {/* Hamburger Icon */}
             <div className="flex lg:hidden">
-              <button onClick={() => setSidebarOpen(true)} className="text-gray-900">
-                <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+              <button onClick={() => setSidebarOpen(true)} className="text-gray-900" >
+               <div className="flex flex-col gap-1 items-end group ">
+                <span className='w-[15px] group-hover:w-[30px] transition-all duration-300 h-[3px] bg-black rounded'></span>
+                <span className='w-[30px] roup-hover:w-[15px]  transition-all duration-300 h-[3px] bg-black rounded'></span>
+               
+               </div>
               </button>
             </div>
 
             {/* Nav Items (Desktop) */}
             <div className="hidden lg:absolute lg:inset-y-0 lg:flex lg:items-center lg:justify-center lg:space-x-12 lg:-translate-x-1/2 lg:left-1/2">
-              <Link href="#" className="text-base font-medium text-gray-900 hover:text-opacity-50">About</Link>
-              <Link href="#" className="text-base font-medium text-gray-900 hover:text-opacity-50">Services</Link>
-              <Link href="#" className="text-base font-medium text-gray-900 hover:text-opacity-50">Contact</Link>
+              <Link href="/about" className="text-base font-medium text-gray-900 hover:text-opacity-50">About</Link>
+              <Link href="/services" className="text-base font-medium text-gray-900 hover:text-opacity-50">Services</Link>
+              <Link href="/contact" className="text-base font-medium text-gray-900 hover:text-opacity-50">Contact</Link>
             </div>
 
             {/* CTA */}
@@ -84,14 +86,15 @@ const Hero = () => {
 
       {/* Hero Section */}
       <section className="relative py-12 sm:py-16 lg:pt-20 xl:pb-0">
-        <div className="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="inline-flex px-4 py-2 text-base text-gray-900 border border-gray-200 rounded-full">
+        <div className="relative px-4 mx-auto sm:px-6 text-center lg:px-8 max-w-7xl">
+        <p className="inline-flex px-4 py-4 text-base text-gray-900 border border-gray-200 rounded-full">
               LinkedIn Profile Optimization Experts
             </p>
-            <h1 className="mt-5 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl lg:text-9xl">
+          <div className="max-w-3xl mx-auto text-center">
+           
+            <span className="mt-5 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl lg:text-5xl">
               We help professionals get noticed by recruiters & clients
-            </h1>
+            </span>
             <p className="max-w-xl mx-auto mt-6 text-base leading-7 text-gray-600">
               We specialize in optimizing and managing LinkedIn profiles to help professionals build their personal brand, expand their network, and boost career opportunities.
             </p>
