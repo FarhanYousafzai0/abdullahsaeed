@@ -12,9 +12,9 @@ export const Page = () => {
    <div className="w-screen overflow-x-hidden text-white">
    <div className="bg-gray-50">
    <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r overflow-hidden opacity-30 w-full"></div>
+         
           
-          <div className="relative md:w-[80%] w-[90%] py-30 mx-auto  pb-16">
+          <div className="relative md:w-[80%] w-[90%] md:py-20 py-10 mx-auto md:pb-5  pb-0">
   {/* Blurred Gradient Background */}
   <div
     className="absolute inset-0 z-0 top-30 left-10 -translate-x-1/2 w-[300px] h-[250px] blur-3xl opacity-40"
@@ -26,8 +26,8 @@ export const Page = () => {
   />
 
   {/* Text Content on Top of Gradient */}
-  <div className="relative z-10">
-    <span className="md:text-5xl text-gray-600 text-4xl font-semibold leading-tight">
+  <div className="relative z-10 mt-20">
+    <span className="md:text-5xl text-gray-600 text-4xl font-semibold ">
     Grow your network. <br /> Boost your career.
     </span>
 
@@ -37,7 +37,7 @@ export const Page = () => {
         </div>
 
    
-   <div className="md:w-[80%] w-[90%] py-20 mx-auto">
+   <div className="md:w-[80%] w-[90%] py-10 mx-auto">
   
 
 

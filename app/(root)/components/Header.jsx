@@ -23,6 +23,7 @@ const Header = () => {
   }, [lastScrollY]);
 
   return (
+    <>
     <header
       className={`fixed top-0 w-full z-50 bg-gray-50   transition-transform duration-500  ${
         scrollingUp ? 'translate-y-0 ' : '-translate-y-full shadow-sm'
@@ -30,21 +31,40 @@ const Header = () => {
     >
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-screen w-64 bg-white md:hidden block z-50 shadow-xl transition-all duration-300 ${
+        className={`fixed top-0 left-0 h-screen w-full bg-white md:hidden block z-50 shadow-xl transition-all duration-300 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         <div className="flex items-center justify-between p-6 ">
         
           <button onClick={() => setSidebarOpen(false)}>
-            <XMarkIcon className="w-6 h-6 cursor-pointer text-gray-700" />
+            <XMarkIcon className="w-8 h-8 absolute top-5 p-1 right-5 bg-black cursor-pointer rounded-full text-white" />
           </button>
         </div>
-        <h2 className="text-lg text-light">Navigations</h2>
+       <div>
+       <h2 className="font-light text-3xl text-light px-4">Navigations</h2>
         <div className="flex flex-col gap-4 p-6">
-          <Link href="#" className="text-gray-800 hover:text-indigo-600 font-medium">About</Link>
-          <Link href="#" className="text-gray-800 hover:text-indigo-600 font-medium">Services</Link>
-          <Link href="#" className="text-gray-800 hover:text-indigo-600 font-medium">Contact</Link>
+        <Link onClick={()=>setSidebarOpen(!sidebarOpen)} href="/" className="text-gray-600 text-1xl  font-medium">Home</Link>
+          <Link onClick={()=>setSidebarOpen(!sidebarOpen)} href="/about" className="text-gray-600 text-1xl  font-medium">About</Link>
+          <Link onClick={()=>setSidebarOpen(!sidebarOpen)} href="/services" className="text-gray-600 text-1xl  font-medium">Services</Link>
+          <Link onClick={()=>setSidebarOpen(!sidebarOpen)} href="/contact" className="text-gray-600 text-1xl  font-medium">Contact</Link>
+
+
+       </div>
+          {/* Soical */}
+<div className=''>
+<h2 className="font-light text-light text-3xl px-4">Socials</h2>
+<div className='flex flex-col  gap-4 p-6'>
+
+<Link  href="/" className="text-gray-600  font-medium">Linkedin</Link>
+<Link  href="/" className="text-gray-600   font-medium">Twitter</Link>
+<Link  href="/" className="text-gray-600   font-medium">Instagram</Link>
+
+</div>
+
+
+</div>
+
           
         </div>
       </div>
@@ -91,6 +111,8 @@ const Header = () => {
         </div>
       </div>
     </header>
+    
+    </>
   );
 };
 

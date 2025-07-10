@@ -29,8 +29,10 @@ const Layout = ({ children }) => {
     return (
       <>
         
-            {children}
-            <Footer />
+           <div className="bg-gray-50">
+           {children}
+           <Footer />
+           </div>
        
       </>
     );

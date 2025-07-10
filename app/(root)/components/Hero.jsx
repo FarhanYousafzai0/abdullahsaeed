@@ -26,69 +26,44 @@ const Hero = () => {
     <div className="overflow-x-hidden bg-gray-50 h-screen relative">
       
       {/* Sidebar for Mobile */}
-      <div 
-  className={`fixed top-0 left-0 h-full w-72 bg-white/95 backdrop-blur-lg z-50 shadow-2xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}
-  style={{
-    borderRight: '1px solid rgba(255,255,255,0.2)',
-    boxShadow: 'rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px'
-  }}
->
-  {/* Header with close button */}
-  <div className="flex items-center justify-between p-6 border-b border-gray-100">
-    <h2 className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-      Menu
-    </h2>
-    <button 
-      onClick={() => setSidebarOpen(false)}
-      className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-      aria-label="Close menu"
-    >
-      <XMarkIcon className="w-6 h-6 text-gray-500 hover:text-gray-700" />
-    </button>
-  </div>
-
-  {/* Navigation Links */}
-  <nav className="p-6 space-y-4">
-    {[
-      { name: 'About', href: '#', icon: <UserIcon className="w-5 h-5" /> },
-      { name: 'Services', href: '#', icon: <CogIcon className="w-5 h-5" /> },
-      { name: 'Work', href: '#', icon: <BriefcaseIcon className="w-5 h-5" /> },
-      { name: 'Contact', href: '#', icon: <EnvelopeIcon className="w-5 h-5" /> }
-    ].map((item) => (
-      <Link
-        key={item.name}
-        href={item.href}
-        className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:text-indigo-600 hover:bg-gray-50 transition-all duration-300 group"
-        onClick={() => setSidebarOpen(false)}
+      <div
+        className={`fixed top-0 left-0 h-screen w-full bg-white md:hidden block z-50 shadow-xl transition-all duration-300 ${
+          sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
       >
+        <div className="flex items-center justify-between p-6 ">
         
-        <span className="font-medium">{item.name}</span>
-        <ChevronRightIcon className="ml-auto w-4 h-4 text-gray-400 group-hover:text-indigo-600 transition-colors" />
-      </Link>
-    ))}
-  </nav>
+          <button onClick={() => setSidebarOpen(false)}>
+            <XMarkIcon className="w-8 h-8 absolute top-5 p-1 right-5 bg-black cursor-pointer rounded-full text-white" />
+          </button>
+        </div>
+       <div>
+       <h2 className="font-light text-3xl text-light px-4">Navigations</h2>
+        <div className="flex flex-col gap-4 p-6">
+        <Link onClick={()=>setSidebarOpen(!sidebarOpen)} href="/" className="text-gray-600 text-1xl  font-medium">Home</Link>
+          <Link onClick={()=>setSidebarOpen(!sidebarOpen)} href="/about" className="text-gray-600 text-1xl  font-medium">About</Link>
+          <Link onClick={()=>setSidebarOpen(!sidebarOpen)} href="/services" className="text-gray-600 text-1xl  font-medium">Services</Link>
+          <Link onClick={()=>setSidebarOpen(!sidebarOpen)} href="/contact" className="text-gray-600 text-1xl  font-medium">Contact</Link>
 
-  {/* Footer with social links */}
-  <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-100">
-    <p className="text-sm text-gray-500 mb-4">Connect with me</p>
-    <div className="flex gap-4">
-      {[
-        { name: 'Twitter',      },
-        { name: 'LinkedIn',      },
-        { name: 'GitHub',     }
-      ].map((social) => (
-        <a
-          key={social.name}
-          href="#"
-          className="p-2 rounded-full text-black hover:text-indigo-600 transition-colors"
-          aria-label={social.name}
-        >
-          
-        </a>
-      ))}
-    </div>
-  </div>
+
+       </div>
+          {/* Soical */}
+<div className=''>
+<h2 className="font-light text-light text-3xl px-4">Socials</h2>
+<div className='flex flex-col  gap-4 p-6'>
+
+<Link  href="/" className="text-gray-600  font-medium">Linkedin</Link>
+<Link  href="/" className="text-gray-600   font-medium">Twitter</Link>
+<Link  href="/" className="text-gray-600   font-medium">Instagram</Link>
+
 </div>
+
+
+</div>
+
+          
+        </div>
+      </div>
 
       {/* Header */}
       <div className={`fixed top-0 left-0 w-full z-40 shadowtransition-transform duration-500 ${scrollingUp ? 'translate-y-0 bg-gray-50 ' : '-translate-y-full'}`}>
