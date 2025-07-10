@@ -67,7 +67,7 @@ const ContactPage = () => {
   return (
     <>
       <Header />
-      <div className="w-screen overflow-x-hidden min-h-screen bg-white text-gray-600">
+      <div className="w-screen overflow-x-hidden min-h-screen bg-gray-50 text-gray-600">
         {/* Gradient Background Section */}
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 opacity-30 h-[600px] w-full"></div>
@@ -85,7 +85,7 @@ const ContactPage = () => {
 
   {/* Text Content on Top of Gradient */}
   <div className="relative z-10">
-    <span className="md:text-5xl text-4xl font-semibold leading-tight">
+    <span className="md:text-5xl text-4xl py-20 font-semibold leading-tight">
       Let's take your LinkedIn profile <br /> to the next level.
     </span>
 
@@ -96,7 +96,7 @@ const ContactPage = () => {
 </div>
         </div>
 
-        <div className="relative md:w-[80%] w-[90%] py-30 mx-auto">
+        <div className="relative md:w-[80%] w-[90%] md:py-30  mx-auto">
           <div className="w-full pt-10 flex flex-col md:flex-row gap-20 text-lg">
             {/* LEFT: FORM */}
             <form

@@ -107,7 +107,7 @@ const Hero = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-20 sm:py-16 lg:pt-32 xl:pb-0">
+      <section className="relative py-30 sm:py-16 lg:pt-32 xl:pb-0">
         <div className="relative px-4 mx-auto sm:px-6 text-center lg:px-8 max-w-7xl">
           <p className="inline-flex px-4 py-3 text-base text-gray-900 border border-gray-200 rounded-full">
             LinkedIn Profile Optimization Experts
