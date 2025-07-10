@@ -72,13 +72,7 @@ const Hero = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link href="/">
-                <Image
-                  width={100}
-                  height={40}
-                  className="w-auto h-8"
-                  src="https://d33wubrfki0l68.cloudfront.net/682a555ec15382f2c6e7457ca1ef48d8dbb179ac/f8cd3/images/logo.svg"
-                  alt="Logo"
-                />
+              <img width={90} height={40} src="Logo.png" alt="" srcset="" />
               </Link>
             </div>
 
