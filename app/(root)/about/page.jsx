@@ -1,41 +1,63 @@
-import React from 'react'
-import Header from '../components/Header'
+"use client";
+import { SpinnerDotted } from "spinners-react";
 
-const page = () => {
+
+export const Page = () => {
   return (
-    <>
-    <Header/>
-      <div className='w-screen overflow-x-hidden min-h-screen bg-white text-gray-600'>
+    <div className="w-screen overflow-x-hidden text-white">
+      <div className="md:w-[80%] w-[90%] py-30 mx-auto h-full">
+        <span className="md:text-7xl max-w-sm text-5xl text-black font-normal">
+          Helping clients thrive <br />
+          in the digital world
+        </span>
 
-      <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 opacity-30 h-[600px] w-full"></div>
-          
-          <div className="relative md:w-[80%] w-[90%] py-30 mx-auto pt-24 pb-16">
-  {/* Blurred Gradient Background */}
-  <div
-    className="absolute inset-0 z-0 top-30 left-10 -translate-x-1/2 w-[300px] h-[250px] blur-3xl opacity-40"
-    style={{
-      background:
-        'linear-gradient(90deg, #44ff9a -0.55%, #44b0ff 22.86%, #8b44ff 48.36%, #ff6644 73.33%, #ebff70 99.34%)',
-      borderRadius: '9999px'
-    }}
-  />
+        <hr className="text-neutral-300 my-10" />
 
-  {/* Text Content on Top of Gradient */}
-  <div className="relative z-10">
-  <span className="md:text-5xl text-4xl font-semibold leading-tight">
-  Empowering Your LinkedIn Presence <br /> for Career Growth.
-</span>
+        <div className="w-full flex md:flex-row flex-col gap-5">
+          <div className="flex flex-col gap-3">
+            <p className="font-light text-black max-w-xs leading-6">
+              I help clients from all over the world with tailor-made solutions. With each project, I push my work to new horizons, always putting quality first.
+            </p>
+            <span className="text-neutral-400 flex items-center gap-3">
+              <span>Always exploring</span>  
+              <SpinnerDotted size={30} thickness={100} speed={100} color="#a1a1a1" />  
+            </span>
+          </div>
 
-<p className="mt-6 text-lg text-neutral-600 max-w-2xl">
-  At Abdullah LinkedInWala, we help professionals stand out, build powerful networks, and unlock new opportunities with proven LinkedIn strategies and personal branding expertise.
-</p>
-  </div>
-</div>
+          <div className="flex-1 rounded-md">
+            <img src="/Work.png" alt="" className="rounded-md" />
+          </div>
         </div>
       </div>
-    </>
-  )
-}
 
-export default page
+      <div className="p-4 gap-4 md:h-screen h-auto w-full flex md:flex-row flex-col-reverse mt-15">
+        <div className="w-full h-full md:p-5 flex justify-center">
+          <div className="md:h-[100%] w-[85%] rounded-md flex items-start overflow-hidden">
+            <img src="/cert.jpeg" alt="" className="rounded-md object-center"/>
+          </div>
+        </div>
+
+        <div className="w-full h-full md:p-5 flex justify-center">
+          <div className="h-[80%] w-[90%] flex items-start relative">
+            <div>
+              
+
+              <div className="flex flex-col px-4">
+                <span className="mt-4 md:text-4xl text-3xl text-black">
+                  Full Stack Web- <br /> Developer 2024 
+                </span>
+                <p className="text-black text-sm font-extralight max-w-sm mt-4 leading-5">
+                  I'm a certified Full Stack Developer from PNY Training Institute, where I completed my training in 2024. 
+                  I've mastered both frontend and backend technologies, and I'm proud to be one of the top-performing 
+                  students from my batch.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Page;
