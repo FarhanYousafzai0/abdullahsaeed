@@ -63,25 +63,31 @@ export const Page = () => {
          <img src="/image.jpeg" alt="Work preview" className="rounded-md w-full object-cover" />
        </div>
      </div>
-   </div>
-{/*  */}
 
+    <div className="mt-20 ">
 
+    <span className="md:text-4xl mr-10 text-5xl text-gray-600 font-normal ">
+              I can help you with
+            </span>
 <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
   {Experience.map((item, index) => (
     <div key={index} className="relative pt-10 px-5 pb-5">
       
-      {/* Number Badge */}
-      <div className="absolute top-0 left-5 -translate-y-1/2 bg-black text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium">
-        {index + 1}
-      </div>
-
-      {/* Title & Description */}
-      <span className="text-black text-2xl font-semibold">{item.title}</span>
-      <p className="text-neutral-600 text-sm mt-4">{item.description}</p>
+      
+<div className="flex items-center "> <div className="p-2 rounded-lg bg-gray-50">
+            {item.icon}
+          </div>
+<span className="text-gray-600 text-2xl font-semibold">{item.title}</span></div>
+      <p className=" text-sm mt-4 text-black">{item.description}</p>
     </div>
   ))}
 </div>
+
+    </div>
+
+   </div>
+{/*  */}
+
 
 
    </div>
@@ -91,7 +97,7 @@ export const Page = () => {
        {/* Text Block */}
        <div className="md:w-1/2 w-full">
   <div className="flex flex-col gap-4 px-2">
-    <span className="md:text-4xl text-3xl text-black font-semibold">
+    <span className="md:text-4xl text-3xl text-gray-600 font-semibold">
       Certified Data Center Engineer
     </span>
 
@@ -112,7 +118,7 @@ export const Page = () => {
 
        {/* Image */}
        <div className="md:w-1/2 w-full">
-         <img src="/pro3.jpeg" alt="Profile" className="rounded-md w-full object-cover" />
+         <img src="/image3.jpeg" alt="Profile" className="rounded-md w-full object-cover" />
        </div>
      </div>
    </div>
