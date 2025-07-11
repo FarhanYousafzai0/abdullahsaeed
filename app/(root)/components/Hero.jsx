@@ -144,7 +144,7 @@ const Hero = () => {
      
       </section>
 
-      <p className="block mx-auto w-fit px-4 py-3 mt-10 font-semibold text-base text-gray-800 border border-gray-200 rounded-full">
+      <p className="block mx-auto w-fit px-4 py-3 my-10 font-semibold text-base text-gray-800 border border-gray-200 rounded-full">
       Stand Out | Get Noticed
           </p>
 
