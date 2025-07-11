@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+
 import Link from 'next/link'
 import { EnvelopeIcon, XMarkIcon } from '@heroicons/react/24/solid'
-import { BriefcaseIcon, ChevronRightIcon, CogIcon, TwitterIcon, UserIcon } from 'lucide-react'
+import { motion } from "motion/react"
+import HeroBanner from './HeroBanner'
 
 const Hero = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -23,6 +25,7 @@ const Hero = () => {
   }, [lastScrollY])
 
   return (
+    <>
     <div className="overflow-x-hidden bg-gray-50 h-screen relative">
       
       {/* Sidebar for Mobile */}
@@ -72,7 +75,7 @@ const Hero = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link href="/">
-              <img width={90} height={40} src="Logo.png" alt="" srcset="" />
+              <img width={90} height={40} src="Logo.png" alt="" />
               </Link>
             </div>
 
@@ -129,10 +132,17 @@ const Hero = () => {
               </button>
               </Link>
             </div>
+          
           </div>
         </div>
+        
       </section>
+
+   
+      
     </div>
+    <HeroBanner/>
+    </>
   )
 }
 

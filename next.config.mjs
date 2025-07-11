@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-      domains: ['tailwindcss.com'],
+      domains: ['img.freepik.com'],
     },
     // output:"export"
   }
