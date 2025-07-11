@@ -42,7 +42,7 @@ const AboutSnapshot = () => {
           <div className="relative inline-flex md:mt-5 group">
               <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt" />
               <Link href={'/about'}>
-              <button  className="relative cursor-pointer inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 rounded-xl">
+              <button  className="relative cursor-pointer inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all duration-200 bg-gray-900 rounded-xl">
                 Learn more
               </button>
               </Link>

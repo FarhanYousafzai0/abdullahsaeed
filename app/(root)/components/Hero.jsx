@@ -100,7 +100,7 @@ const Hero = () => {
             <div className="hidden lg:flex">
         <div className="relative inline-flex w-fit  group">
               <div className="absolute transition-all duration-1000  opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt" />
-              <div type="submit" className="relative inline-flex cursor-pointer  items-center justify-center p-2 text-lg  text-white transition-all duration-200 bg-gray-900 rounded-xl">
+              <div type="submit" className="relative inline-flex cursor-pointer font-semibold  items-center justify-center px-4 py-3 text-md text-white transition-all duration-200 bg-gray-900 rounded-xl">
                 Join community
               </div> 
             </div>
@@ -127,7 +127,7 @@ const Hero = () => {
             <div className="relative inline-flex mt-10  group">
               <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt" />
               <Link href={'/contact'}>
-              <button  className="relative cursor-pointer inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 rounded-xl">
+              <button  className="relative cursor-pointer inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all duration-200 bg-gray-900 rounded-xl">
                 Get Started
               </button>
               </Link>
