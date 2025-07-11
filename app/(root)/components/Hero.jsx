@@ -55,9 +55,9 @@ const Hero = () => {
 <h2 className="font-light text-light text-3xl px-4">Socials</h2>
 <div className='flex flex-col  gap-4 p-6'>
 
-<Link  href="/" className="text-gray-600  font-medium">Linkedin</Link>
-<Link  href="/" className="text-gray-600   font-medium">Twitter</Link>
-<Link  href="/" className="text-gray-600   font-medium">Instagram</Link>
+<Link  href="https://www.linkedin.com/in/abdullahsaeed13/" className="text-gray-600  font-medium">Linkedin</Link>
+<Link  href="https://x.com/abdulla42214136" className="text-gray-600   font-medium">Twitter</Link>
+<Link  href="https://www.instagram.com/abdullahlinkedinwala?utm_source=qr&igsh=MTVibG15cGxuYXJ5dg==" className="text-gray-600   font-medium">Instagram</Link>
 
 </div>
 
@@ -75,7 +75,7 @@ const Hero = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link href="/">
-              <img width={90} height={40} src="Logo.png" alt="" />
+              <img width={120} height={40} src="Logo.png" alt="" />
               </Link>
             </div>
 
@@ -98,19 +98,24 @@ const Hero = () => {
 
             {/* CTA */}
             <div className="hidden lg:flex">
-        <div className="relative inline-flex w-fit  group">
-              <div className="absolute transition-all duration-1000  opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt" />
-              <div type="submit" className="relative inline-flex cursor-pointer font-semibold  items-center justify-center px-4 py-3 text-md text-white transition-all duration-200 bg-gray-900 rounded-xl">
-                Join community
-              </div> 
-            </div>
-        </div>
+  <a
+    href="https://www.facebook.com/profile.php?id=61578289315568" // <-- Replace with actual link
+    target="_blank"
+    rel="noopener noreferrer"
+    className="relative inline-flex w-fit group"
+  >
+    <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt" />
+    <div className="relative inline-flex cursor-pointer items-center justify-center p-2 text-lg text-white transition-all duration-200 bg-[#0077B5] rounded-xl">
+      Join community
+    </div>
+  </a>
+</div>
           </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-30 sm:py-16 lg:pt-32 xl:pb-0">
+      <section className="relative py-30 sm:py-16 lg:pt-40 xl:pb-0">
         <div className="relative px-4 mx-auto sm:px-6 text-center lg:px-8 max-w-7xl">
           <p className="inline-flex px-4 py-3 text-base text-gray-900 border border-gray-200 rounded-full">
             LinkedIn Profile Optimization Experts
@@ -124,22 +129,25 @@ const Hero = () => {
             </p>
 
             {/* CTA Button with Gradient Glow */}
-            <div className="relative inline-flex mt-10  group">
+            <div className="relative inline-flex mt-10   group">
               <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt" />
               <Link href={'/contact'}>
-              <button  className="relative cursor-pointer inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all duration-200 bg-gray-900 rounded-xl">
+              <button  className="relative cursor-pointer inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all duration-200 bg-[#0077B5] rounded-xl">
                 Get Started
               </button>
               </Link>
             </div>
-          
-          </div>
-        </div>
         
+          </div>
+         
+        </div>
+     
       </section>
 
-   
-      
+      <p className="block mx-auto w-fit px-4 py-3 mt-10 font-semibold text-base text-gray-800 border border-gray-200 rounded-full">
+      Stand Out | Get Noticed
+          </p>
+
     </div>
     <HeroBanner/>
     </>

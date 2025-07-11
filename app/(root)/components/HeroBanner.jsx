@@ -22,17 +22,17 @@ const HeroBanner = () => {
       />
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 p-4 bg-white rounded-md overflow-hidden">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 p-4 border bg-white rounded-md overflow-hidden">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Text Column */}
           <div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-600 leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold  -leading-tight">
               Build Your Personal Brand with <br />
-              <span className="text-gray-600">
+              <span className="text-gray-800">
                 LinkedIn Optimization
               </span>
             </h1>
-            <p className="mt-6 text-lg text-gray-600">
+            <p className="mt-6 text-lg text-gray-800">
               We help professionals craft stunning LinkedIn profiles that get recruiters' attention and land big opportunities.
             </p>
             <div className="mt-8">
@@ -52,9 +52,9 @@ const HeroBanner = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="rounded-2xl overflow-hidden shadow-xl h-[500px]"
+            className="rounded-2xl overflow-hidden shadow-xl "
           >
-            <img src="/Banner.jpeg" className='object-center w-full h-full' width={100} height={100} alt=""  />
+            <img src="/Banner2.png"  />
           </motion.div>
         </div>
       </div>

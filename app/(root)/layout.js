@@ -4,6 +4,7 @@ import Lenis from "lenis";
 import Footer from "./components/Footer";
 import "./globals.css";
 import { useEffect, useState } from "react";
+import WhatsAppFloatingButton from "./components/WhatsAppFloatingButton";
 const Layout = ({ children }) => {
     const [showLoader, setShowLoader] = useState(true);
   
@@ -31,6 +32,7 @@ const Layout = ({ children }) => {
         
            <div className="bg-gray-50">
            {children}
+           <WhatsAppFloatingButton />
            <Footer />
            </div>
        

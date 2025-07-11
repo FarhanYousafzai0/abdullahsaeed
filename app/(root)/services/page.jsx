@@ -91,7 +91,36 @@ const Services = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
       )
+    },
+    
+    {
+      title: 'Job Application Services',
+      description: [
+        'Tailored job applications aligned to your goals',
+        'Resume & cover letter support that stands out',
+        'Personalized job search strategy'
+      ],
+      icon: (
+        <svg className="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m-9 4h12a2 2 0 002-2V7a2 2 0 00-2-2H9l-4 4v11a2 2 0 002 2z" />
+        </svg>
+      )
+    },
+    {
+      title: 'LinkedIn Audits',
+      description: [
+        'Profile evaluation with actionable feedback',
+        'Keyword optimization for higher visibility',
+        'Content & engagement review'
+      ],
+      icon: (
+        <svg className="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+        </svg>
+      )
     }
+
+
   ].map((service, idx) => (
     <div
       key={idx}

@@ -117,9 +117,9 @@ const ContactPage = () => {
 
               {/* Input Fields */}
               {[
-                { label: "Your full name", name: "name", type: "text", placeholder: "Abdullah Khan" },
-                { label: "Email address", name: "email", type: "email", placeholder: "abdullah@example.com" },
-                { label: "Company or personal brand", name: "organization", type: "text", placeholder: "Abdullah LinkedInWala" },
+                { label: "Your full name", name: "name", type: "text", placeholder: "Enter Your Name....." },
+                { label: "Email address", name: "email", type: "email", placeholder: "Enter Your Email....." },
+                { label: "Company or personal brand", name: "organization", type: "text", placeholder: "Abdullah LinkedinWala...." },
                 { label: "Service you're interested in", name: "services", type: "text", placeholder: "Profile Optimization, Branding..." },
               ].map((field, index) => (
                 <div key={index} className="relative">
@@ -159,7 +159,7 @@ const ContactPage = () => {
               {/* Submit Button */}
               <div className="relative inline-flex w-fit mt-10 group">
               <div className="absolute transition-all duration-1000  opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt" />
-              <button type="submit" disabled={isSubmitting} className="relative inline-flex cursor-pointer  items-center justify-center h-[3rem] w-[8rem] text-lg  text-white transition-all duration-200 bg-gray-900 rounded-xl">
+              <button type="submit" disabled={isSubmitting} className="relative inline-flex cursor-pointer  items-center justify-center h-[3rem] w-[8rem] text-lg  text-white transition-all duration-200 bg-[#0077B5] rounded-xl">
                 {isSubmitting ? <BeatLoader size={10} color="white" /> :  "Sumbit"}
               </button> 
             </div>
@@ -206,9 +206,9 @@ const ContactPage = () => {
                   <h5 className="text-neutral-400 uppercase text-xs mb-4">Socials</h5>
                   <ul className="space-y-3">
                     {[
-                      { name: "LinkedIn", url: "https://linkedin.com/" },
-                      { name: "Instagram", url: "https://instagram.com/" },
-                      { name: "Twitter", url: "https://twitter.com/" }
+                      { name: "LinkedIn", url: "https://www.linkedin.com/in/abdullahsaeed13/" },
+                      { name: "Instagram", url: "https://www.instagram.com/abdullahlinkedinwala?utm_source=qr&igsh=MTVibG15cGxuYXJ5dg==" },
+                      { name: "Twitter", url: "https://x.com/abdulla42214136" }
                     ].map((social, index) => (
                       <li key={index}>
                         <Link 

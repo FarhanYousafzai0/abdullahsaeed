@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <>
     <header
-      className={`fixed top-0 w-full z-50 bg-gray-50   transition-transform duration-500  ${
+      className={`fixed top-0 w-full z-50   transition-transform duration-500  ${
         scrollingUp ? 'translate-y-0 ' : '-translate-y-full shadow-sm'
       }`}
     >
@@ -50,15 +50,25 @@ const Header = () => {
           <Link onClick={()=>setSidebarOpen(!sidebarOpen)} href="/contact" className="text-gray-600 text-1xl  font-medium">Contact</Link>
 
 
+
+          
+
+
+
+
+
+
+
+
        </div>
           {/* Soical */}
 <div className=''>
 <h2 className="font-light text-light text-3xl px-4">Socials</h2>
 <div className='flex flex-col  gap-4 p-6'>
 
-<Link  href="/" className="text-gray-600  font-medium">Linkedin</Link>
-<Link  href="/" className="text-gray-600   font-medium">Twitter</Link>
-<Link  href="/" className="text-gray-600   font-medium">Instagram</Link>
+<Link  href="https://www.linkedin.com/in/abdullahsaeed13/" className="text-gray-600  font-medium">Linkedin</Link>
+<Link  href="https://x.com/abdulla42214136" className="text-gray-600   font-medium">Twitter</Link>
+<Link  href="https://www.instagram.com/abdullahlinkedinwala?utm_source=qr&igsh=MTVibG15cGxuYXJ5dg==" className="text-gray-600   font-medium">Instagram</Link>
 
 </div>
 
@@ -73,7 +83,7 @@ const Header = () => {
         {/* Logo */}
         <div className="flex-shrink-0">
           <Link href="/">
-          <img width={90} height={40} src="Logo.png" alt="" srcset="" />
+          <img width={120} height={40} src="Logo.png" alt="" srcset="" />
           </Link>
         </div>
 
@@ -86,13 +96,19 @@ const Header = () => {
 
         {/* CTA */}
         <div className="hidden lg:flex">
-        <div className="relative inline-flex w-fit  group">
-              <div className="absolute transition-all duration-1000  opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt" />
-              <div type="submit" className="relative inline-flex cursor-pointer  items-center justify-center p-2 text-lg  text-white transition-all duration-200 bg-gray-900 rounded-xl">
-                Join community
-              </div> 
-            </div>
-        </div>
+  <a
+    href="https://www.facebook.com/profile.php?id=61578289315568" // <-- Replace with actual link
+    target="_blank"
+    rel="noopener noreferrer"
+    className="relative inline-flex w-fit group"
+  >
+    <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt" />
+    <div className="relative inline-flex cursor-pointer items-center justify-center p-2 text-lg text-white transition-all duration-200 bg-[#0077B5] rounded-xl">
+      Join community
+    </div>
+  </a>
+</div>
+
 
         {/* Mobile Menu Button */}
         <div className="flex lg:hidden">
