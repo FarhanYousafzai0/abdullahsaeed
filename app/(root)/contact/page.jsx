@@ -160,7 +160,7 @@ const ContactPage = () => {
               <div className="relative inline-flex w-fit mt-10 group">
               <div className="absolute transition-all duration-1000  opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt" />
               <button type="submit" disabled={isSubmitting} className="relative inline-flex cursor-pointer  items-center justify-center h-[3rem] w-[8rem] text-lg  text-white transition-all duration-200 bg-[#0077B5] rounded-xl">
-                {isSubmitting ? <BeatLoader size={10} color="white" /> :  "Sumbit"}
+                {isSubmitting ? <BeatLoader size={10} color="white" /> :  "Submit"}
               </button> 
             </div>
             </form>
