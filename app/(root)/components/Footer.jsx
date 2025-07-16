@@ -55,7 +55,7 @@ const Footer = () => {
             <h3 className="font-semibold mb-1">Contact</h3>
             <p>0092 333 111 222 6</p>
             <p>info@abdullahlinkedinwala.com</p>
-            <p>abdullahlinkedinwala.com@gmail.com</p>
+            <p>abdullahlinkedinwala@gmail.com</p>
           </div>
           <div>
             <h3 className="font-semibold mb-1">Follow</h3>

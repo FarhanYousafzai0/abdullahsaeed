@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 const HeroBanner = () => {
   return (
-    <section className="relative  pb-20 sm:pb-24 lg:pb-40 bg-white overflow-hidden">
+    <section className="relative h-s pb-20 sm:pb-24 lg:pb-40 bg-white overflow-hidden">
       {/* Glowing Gradient Background (like Testimonials) */}
       <div
         className="absolute -inset-x-4 inset-y-16 sm:-inset-x-6 sm:inset-y-12 lg:-inset-x-8 lg:inset-y-16 z-0"
